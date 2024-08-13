@@ -49,5 +49,15 @@ Remove a running do-git container
 ./stop.sh
 ```
 
+# Download folder from github repo using sparse-checkout
+
+An embedded [script](Container-Root/gitcp.sh) within this container enables users to copy content of a specified path from a github repository to a destination folder. This functionality is implemented the github native [sparse-checkout](https://git-scm.com/docs/git-sparse-checkout) feature. 
+
+The following example downloads the [linux](https://github.com/iankoulski/depend-on-docker/tree/master/linux) folder from the master branch of the [depend-on-docker](https://github.com/iankoulski/depend-on-docker) github repo:  
+
+```bash
+docker run -it --rm -v $(pwd)/..:/wd iankoulski/do-git /gitcp.sh https://github.com/iankoulski/depend-on-docker/tree/master/linux /wd/linux"
+```
+
 # License
 Please see the [LICENSE](LICENSE) file for project license details
