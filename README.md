@@ -1,5 +1,5 @@
 # do-git 
-A [do-framework](https://bit.ly/do-framework) project to build a git container and run git commands.
+A [do-framework](https://bit.ly/do-framework) [project](https://github.com/iankoulski/do-git) to build a git container based on Alpine and run git commands. This container also has a utility to download folders from github to a specified destination.
 
 # Build
 
